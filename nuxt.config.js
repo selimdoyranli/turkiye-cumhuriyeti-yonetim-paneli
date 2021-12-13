@@ -34,7 +34,6 @@ module.exports = {
   styleResources: {
     scss: [
       // Plugins
-      '~/assets/style/scss/plugins/_browserhack.scss', // Doc: https://github.com/selimdoyranli/browser-hack-sass-mixins
       '~/assets/style/scss/plugins/_breakpoint.scss',
       '~/assets/style/scss/plugins/_mq.scss', // Doc: https://github.com/sass-mq/sass-mq
       // Functions
@@ -51,7 +50,8 @@ module.exports = {
    */
   css: [
     // Actual styles entry point (as import management)
-    '~/assets/style/scss/app.scss'
+    '~/assets/style/scss/app.scss',
+    'xp.css/dist/XP.css'
   ],
 
   /*
@@ -64,7 +64,7 @@ module.exports = {
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
    */
-  components: [{ path: '~/components', pathPrefix: false }],
+  components: false,
 
   /*
    ** Nuxt.js dev-modules

@@ -1,7 +1,7 @@
 {
   "name": "turkiye-cumhuriyeti-yonetim-paneli",
   "version": "1.0.0",
-  "description": "",
+  "description": "Siz bu kardeşinize password'u verin..",
   "private": false,
   "keywords": [
     "turkiye-cumhuriyeti-yonetim-paneli"
@@ -43,7 +43,8 @@
     "@nuxtjs/composition-api": "^0.24.7",
     "cross-env": "^5.2.0",
     "express": "^4.17.1",
-    "nuxt": "2.15.2"
+    "nuxt": "2.15.2",
+    "xp.css": "^0.3.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-module": "^3.0.0",

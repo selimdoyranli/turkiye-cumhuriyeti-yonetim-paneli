@@ -1,13 +1,27 @@
 <template lang="pug">
 .page.main-page
-  h1 ok
+  AppWindow
 </template>
 
 <script>
-import { defineComponent, ref } from '@nuxtjs/composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
+import { AppWindow } from '@/components/Window'
 
 export default defineComponent({
-  setup() {}
+  components: {
+    AppWindow
+  },
+  setup() {},
+  head: {
+    title: 'Türkiye Cumhuriyeti Yönetim Paneli',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: `Siz bu kardeşinize password'u verin`
+      }
+    ]
+  }
 })
 </script>
 
