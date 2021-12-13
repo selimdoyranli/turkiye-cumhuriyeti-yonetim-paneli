@@ -1,0 +1,8 @@
+.layout {
+  position: relative;
+
+  main.router-view-wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+  }
+}

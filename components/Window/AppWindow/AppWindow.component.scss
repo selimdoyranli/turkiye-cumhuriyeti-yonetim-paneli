@@ -1,0 +1,74 @@
+.app-window {
+  position: relative;
+  width: 768px;
+  margin: 3rem auto;
+
+  &__head {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 0.4rem;
+  }
+
+  fieldset {
+    strong {
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  &__bannedProducts {
+    flex-flow: wrap;
+
+    .break {
+      width: 100%;
+    }
+
+    .input-group {
+      display: flex;
+      justify-content: flex-start;
+      width: 15%;
+      margin: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .economy {
+    .field-row {
+      width: 300px;
+    }
+
+    .economy__columnsWrapper {
+      display: flex;
+
+      .interest-field-group {
+        flex: 1;
+      }
+    }
+  }
+
+  .shortcuts {
+    .field-row {
+      flex-flow: wrap;
+
+      .row {
+        flex-flow: wrap;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 1rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        button {
+          width: 18%;
+          margin: 0;
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+}
