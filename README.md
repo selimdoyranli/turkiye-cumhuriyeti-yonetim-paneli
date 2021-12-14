@@ -2,7 +2,7 @@
 
 &nbsp;
 
-![Screenshot](https://raw.githubusercontent.com/selimdoyranli/turkiye-cumhuriyeti-yonetim-paneli/master/static/meta.png?token=AFNDWAZXKCHAZ27MTKLPG4LBYENOC)
+![Screenshot](https://raw.githubusercontent.com/selimdoyranli/turkiye-cumhuriyeti-yonetim-paneli/master/static/meta.jpg?token=AFNDWAZXKCHAZ27MTKLPG4LBYENOC)
 
 [turkiyecumhuriyetiyonetimpaneli.vercel.app](https://turkiyecumhuriyetiyonetimpaneli.vercel.app)
 

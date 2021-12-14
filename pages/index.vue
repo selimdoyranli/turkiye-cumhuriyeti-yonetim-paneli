@@ -38,9 +38,9 @@ export default defineComponent({
       },
       { hid: 'og:title', name: 'og:title', content: 'Türkiye Cumhuriyeti Yönetim Paneli' },
       { hid: 'og:description', name: 'og:description', content: `Siz bu kardeşinize password'u verin...` },
-      { hid: 'og:image', name: 'og:image', content: `/meta.png` },
+      { hid: 'og:image', name: 'og:image', content: `https://turkiyecumhuriyetiyonetimpaneli.vercel.app/meta.jpg` },
       { hid: 'twitter:card', name: 'twitter:card', content: `summary_large_image` },
-      { hid: 'twitter:image', name: 'twitter:image', content: `/meta.png` }
+      { hid: 'twitter:image', name: 'twitter:image', content: `https://turkiyecumhuriyetiyonetimpaneli.vercel.app/meta.jpg` }
     ]
   }
 })
