@@ -1,0 +1,363 @@
+/* stylelint-disable */
+// https://github.com/tdcosta100/WindowsXP
+#taskbar {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 1024px;
+}
+
+#start-button {
+  flex-shrink: 0;
+}
+
+#start-button .container {
+  position: relative;
+  overflow: hidden;
+}
+
+#start-button .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#task-band {
+  flex-grow: 1;
+}
+
+#tray-notify {
+  flex-shrink: 0;
+}
+
+#tray-notify .container {
+  position: relative;
+  overflow: hidden;
+}
+
+#tray-notify .clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+}
+
+#tray-notify .clock .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Desktop */
+#desktop {
+  background-image: url(https://raw.githubusercontent.com/tdcosta100/WindowsXP/master/images/Wallpapers/Bliss.jpg);
+  background-size: cover;
+}
+
+/* Taskbar */
+#taskbar {
+  height: 30px;
+}
+
+#taskbar > .background .row {
+  background-image: url(https://raw.githubusercontent.com/tdcosta100/WindowsXP/master/images/Themes/Blue/TaskbarBackground.png);
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+}
+
+#taskbar > .background .top {
+  height: 15px;
+  background-size: 100% 186.666667%;
+}
+
+#taskbar > .background .middle {
+  background-size: 100% 1400%;
+  background-position-y: 57.692308%;
+}
+
+#taskbar > .background .bottom {
+  height: 11px;
+  background-size: 100% 254.545455%;
+  background-position-y: 100%;
+}
+
+/* Start Button */
+#start-button {
+}
+
+/* Start Button - Sizes */
+#start-button .background .left {
+  width: 6px;
+}
+
+#start-button .background .right {
+  width: 52px;
+}
+
+#start-button .background .top {
+  height: 13px;
+}
+
+#start-button .background .bottom {
+  height: 14px;
+}
+
+/* Start Button - Content */
+#start-button .content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 2px 24px 4px 10px;
+  height: 26px;
+}
+
+#start-button .content .icon img {
+  display: block;
+  image-rendering: pixelated;
+}
+
+#start-button .content .text {
+  color: rgb(255, 255, 255);
+  font-family: 'Franklin Gothic Medium';
+  font-style: italic;
+  font-size: 14pt;
+  text-shadow: 1px 2px 2px rgb(69, 76, 16), 0 0 3px rgb(69, 76, 16);
+  margin-bottom: 1px;
+  padding-right: 3px;
+}
+
+/* Start Button - Background */
+#start-button .background .row {
+  background-image: url(https://raw.githubusercontent.com/tdcosta100/WindowsXP/master/images/Themes/Blue/StartButton.png);
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+}
+
+/* All States */
+#start-button .background .left .top {
+  background-size: 1650% 761.538462%;
+}
+
+#start-button .background .left .middle {
+  background-size: 1650% 1650%;
+}
+
+#start-button .background .left .bottom {
+  background-size: 1650% 707.142857%;
+}
+
+#start-button .background .middle .top {
+  background-size: 241.463415% 761.538462%;
+}
+
+#start-button .background .middle .middle {
+  background-size: 241.463415% 1650%;
+}
+
+#start-button .background .middle .bottom {
+  background-size: 241.463415% 707.142857%;
+}
+
+#start-button .background .right .top {
+  background-size: 190.384615% 761.538462%;
+}
+
+#start-button .background .right .middle {
+  background-size: 190.384615% 1650%;
+}
+
+#start-button .background .right .bottom {
+  background-size: 190.384615% 707.142857%;
+}
+
+#start-button .background .left .row {
+  background-position-x: 0;
+}
+
+#start-button .background .middle .row {
+  background-position-x: 10.344828%;
+}
+
+#start-button .background .right .row {
+  background-position-x: 100%;
+}
+
+/* Normal */
+#start-button .background .top {
+  background-position-y: 0;
+}
+
+#start-button .background .column .middle {
+  background-position-y: 13.978495%;
+}
+
+#start-button .background .bottom {
+  background-position-y: 22.352941%;
+}
+
+/* Hover */
+#start-button.hover .background .top {
+  background-position-y: 38.372093%;
+}
+
+#start-button.hover .background .column .middle {
+  background-position-y: 49.462366%;
+}
+
+#start-button.hover .background .bottom {
+  background-position-y: 61.176471%;
+}
+
+/* Pressed */
+#start-button.pressed .background .top {
+  background-position-y: 76.744186%;
+}
+
+#start-button.pressed .background .column .middle {
+  background-position-y: 84.946237%;
+}
+
+#start-button.pressed .background .bottom {
+  background-position-y: 100%;
+}
+
+/* Tray Notify */
+#tray-notify {
+}
+
+#tray-notify .container {
+  height: 100%;
+}
+
+/* Start Button - Sizes */
+#tray-notify .background .left {
+  width: 34px;
+}
+
+#tray-notify .background .right {
+  width: 10px;
+}
+
+#tray-notify .background .top {
+  height: 12px;
+}
+
+#tray-notify .background .bottom {
+  height: 12px;
+}
+
+/* Start Button - Background */
+#tray-notify .background .row {
+  background-image: url(https://raw.githubusercontent.com/tdcosta100/WindowsXP/master/images/Themes/Blue/TaskbarTray.png);
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+}
+
+#tray-notify .background .left .top {
+  background-size: 323.529412% 233.333333%;
+}
+
+#tray-notify .background .left .middle {
+  background-size: 323.529412% 700%;
+}
+
+#tray-notify .background .left .bottom {
+  background-size: 323.529412% 233.333333%;
+}
+
+#tray-notify .background .middle .top {
+  background-size: 166.666667% 233.333333%;
+}
+
+#tray-notify .background .middle .middle {
+  background-size: 166.666667% 700%;
+}
+
+#tray-notify .background .middle .bottom {
+  background-size: 166.666667% 233.333333%;
+}
+
+#tray-notify .background .right .top {
+  background-size: 1100% 233.333333%;
+}
+
+#tray-notify .background .right .middle {
+  background-size: 1100% 700%;
+}
+
+#tray-notify .background .right .bottom {
+  background-size: 1100% 233.333333%;
+}
+
+#tray-notify .background .left .row {
+  background-position-x: 0;
+}
+
+#tray-notify .background .middle .row {
+  background-position-x: 77.272727%;
+}
+
+#tray-notify .background .right .row {
+  background-position-x: 100%;
+}
+
+#tray-notify .background .top {
+  background-position-y: 0;
+}
+
+#tray-notify .background .column .middle {
+  background-position-y: 50%;
+}
+
+#tray-notify .background .bottom {
+  background-position-y: 100%;
+}
+
+#tray-notify .content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  position: relative;
+  margin: 0 7px 0 19px;
+  height: 30px;
+  font-family: 'Tahoma';
+  font-size: 8pt;
+  color: rgb(255, 255, 255);
+}
+
+#tray-notify .clock {
+  width: 40px;
+  text-align: center;
+}
+
+.background.sliced {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.background.sliced.vertical {
+  flex-direction: column;
+}
+
+.background.sliced .top,
+.background.sliced .bottom {
+  flex-shrink: 0;
+}
+
+.background.sliced .middle {
+  flex-grow: 1;
+}
+
+.background.sliced .column {
+  display: flex;
+  flex-direction: column;
+}

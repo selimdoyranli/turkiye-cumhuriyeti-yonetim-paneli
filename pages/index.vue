@@ -1,17 +1,33 @@
 <template lang="pug">
 .page.main-page
+  AppLoader(v-if="isLoadingApp")
   AppWindow
+  AppTaskBar
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, onMounted, ref } from '@nuxtjs/composition-api'
+import { AppLoader } from '@/components/Loader'
 import { AppWindow } from '@/components/Window'
+import { AppTaskBar } from '@/components/Bar'
 
 export default defineComponent({
   components: {
-    AppWindow
+    AppLoader,
+    AppWindow,
+    AppTaskBar
   },
-  setup() {},
+  setup() {
+    const isLoadingApp = ref(true)
+
+    onMounted(() => {
+      setTimeout(() => {
+        isLoadingApp.value = false
+      }, 4000)
+    })
+
+    return { isLoadingApp }
+  },
   head: {
     title: 'Türkiye Cumhuriyeti Yönetim Paneli',
     meta: [
@@ -31,5 +47,12 @@ export default defineComponent({
 <style lang="scss" scoped>
 .page {
   position: relative;
+  max-width: 1024px;
+  min-height: calc(100vh - 6rem);
+  margin: 0 auto;
+  padding: 3rem 0;
+  background-image: url('~/assets/img/elements/bg.jpg');
+  background-position: center center;
+  background-size: cover;
 }
 </style>
