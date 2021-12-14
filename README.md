@@ -2,6 +2,10 @@
 
 &nbsp;
 
+![Screenshot](https://raw.githubusercontent.com/selimdoyranli/turkiye-cumhuriyeti-yonetim-paneli/master/static/meta.png?token=AFNDWAZXKCHAZ27MTKLPG4LBYENOC)
+
+&nbsp;
+
 ## Installation
 
 Git clone.
