@@ -163,8 +163,8 @@ export default defineComponent({
       interest: 14,
       exchangeReserve: -54600000000,
       exchangeReserveRange: 100,
-      usd: 14.53,
-      eur: 16.42
+      usd: 16.8,
+      eur: 17.52
     })
 
     watch(
