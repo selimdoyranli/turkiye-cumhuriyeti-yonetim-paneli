@@ -9,7 +9,7 @@
   .window-body
     .app-window__head
       h4.app-window__title TÜRKİYE CUMHURİYETİ YÖNETİM PANELİ
-      span.app-window__version v2021.04.07
+      span.app-window__version v2022.04.07
 
     // Economy
     fieldset.economy
