@@ -19,7 +19,7 @@
     }
   }
 
-  &__bannedProducts {
+  &__countries {
     flex-flow: wrap;
 
     .break {
@@ -41,11 +41,9 @@
     }
 
     .economy__columnsWrapper {
-      display: flex;
-
-      .interest-field-group {
-        flex: 1;
-      }
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 

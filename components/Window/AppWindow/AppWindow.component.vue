@@ -11,19 +11,44 @@
       h4.app-window__title TÜRKİYE CUMHURİYETİ YÖNETİM PANELİ
       span.app-window__version v2022.04.07
 
+    // Defector Control
+    fieldset
+      legend Mülteci Kontrol (Yeni!)
+      .field-row
+        strong Sınır kapısı
+      .field-row
+        .input-group
+          input#sinir-kapisi(type="checkbox" checked @click.prevent)
+          label(for="sinir-kapisi") Açık/Kapalı
+
+      br
+      br
+
+      .field-row
+        strong Kabul edilecek ülkeler
+      .field-row.app-window__countries
+        template(v-for="(country, index) in countries")
+          .input-group
+            input(type="checkbox" :id="country.title" :checked="country.isChecked")
+            label(:for="country.title") {{ country.title }}
+
     // Economy
     fieldset.economy
-      legend Ekonomi (Yeni!)
+      legend Ekonomi
       .economy__columnsWrapper
-        .interest-field-group
+        .field-group
           // Interest
           .field-row
             strong Faiz
           .field-row
             input#interest(v-model="economy.interest" type="range" min="0" max="100")
             strong %{{ economy.interest }}
+          // Fire
+          br
+          .field-row
+            button(@click="economy.usd += 5; economy.eur += 5") Merkez bankası başkanını kov
 
-        .exchange-reserve-field-group
+        .field-group
           // Exchange Reserve
           .field-row
             strong Döviz Rezervi
@@ -31,51 +56,44 @@
             input#exchangeReserve(v-model="economy.exchangeReserveRange" type="range" disabled value="0" max="0")
             strong ${{ economy.exchangeReserve.toLocaleString('tr-TR') }}
           .field-row
-            button(@click="economy.exchangeReserveRange = 0; economy.exchangeReserve -= 10000000") Borçlan
+            br
+            button.ml-auto(@click="economy.exchangeReserveRange = 0; economy.exchangeReserve -= 10000000") Borçlan
 
-      // USD
-      .field-row
-        strong Dolar
-      .field-row
-        input#usd(v-model="economy.usd" type="range" min="0" max="50")
-        strong ₺{{ Number(economy.usd).toFixed(2) }}
+        .field-group
+          br
+          br
+          // USD
+          .field-row
+            strong Dolar
+          .field-row
+            input#usd(v-model="economy.usd" type="range" min="0" max="50")
+            strong ₺{{ Number(economy.usd).toFixed(2) }}
 
-      // EUR
-      .field-row
-        strong Euro
-      .field-row
-        input#eur(v-model="economy.eur" type="range" min="0" max="50")
-        strong ₺{{ Number(economy.eur).toFixed(2) }}
+        .field-group
+          br
+          br
+          // Gas
+          .field-row
+            strong Benzin
+          .field-row
+            input#gas(v-model="economy.gas" type="range" min="0" max="100")
+            strong ₺{{ Number(economy.gas).toFixed(2) }}
 
-      // Fire
-      br
-      br
-      .field-row
-        button(@click="economy.usd += 5; economy.eur += 5") Merkez bankası başkanını kov
+        .field-group
+          // EUR
+          .field-row
+            strong Euro
+          .field-row
+            input#eur(v-model="economy.eur" type="range" min="0" max="50")
+            strong ₺{{ Number(economy.eur).toFixed(2) }}
 
-    // Covid-19 & Banned Products
-    fieldset
-      legend Covid-19
-      .field-row
-        strong Sokağa çıkma yasağı
-      .field-row
-        .input-group
-          input#yerli(type="checkbox")
-          label(for="yerli") Yerli
-        .input-group
-          input#turist(type="checkbox")
-          label(for="turist") Turist
-
-      br
-      br
-
-      .field-row
-        strong Satışı yasaklı ürünler
-      .field-row.app-window__bannedProducts
-        template(v-for="(product, index) in bannedProducts")
-          .input-group
-            input(type="checkbox" :id="product.title")
-            label(:for="product.title") {{ product.title }}
+        .field-group
+          // Diesel
+          .field-row
+            strong Motorin
+          .field-row
+            input#diesel(v-model="economy.diesel" type="range" min="0" max="100")
+            strong ₺{{ Number(economy.diesel).toFixed(2) }}
 
     // Shortcuts
     fieldset.shortcuts
@@ -100,61 +118,49 @@ import { defineComponent, reactive, watch } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {
-    const bannedProducts = reactive([
+    const countries = reactive([
       {
-        title: 'Tarak',
+        title: 'Suriye',
         isChecked: true
       },
       {
-        title: 'Ampul',
+        title: 'Afganistan',
         isChecked: true
       },
       {
-        title: 'Elektronik Eşya',
+        title: 'Pakistan',
         isChecked: true
       },
       {
-        title: 'Sigara',
+        title: 'Irak',
         isChecked: true
       },
       {
-        title: 'Alkol',
+        title: 'İran',
         isChecked: true
       },
       {
-        title: 'Oyuncak',
+        title: 'Ürdün',
         isChecked: true
       },
       {
-        title: 'Kırtasiye',
+        title: 'Yemen',
         isChecked: true
       },
       {
-        title: 'Aksesuar',
+        title: 'Güney Sudan',
         isChecked: true
       },
       {
-        title: 'Giyim',
+        title: 'Myanmar',
         isChecked: true
       },
       {
-        title: 'Ev Tekstili',
+        title: 'Zimbabwe',
         isChecked: true
       },
       {
-        title: 'Hırdavat',
-        isChecked: true
-      },
-      {
-        title: 'Züccaciye',
-        isChecked: true
-      },
-      {
-        title: 'Oto Aksesuar',
-        isChecked: true
-      },
-      {
-        title: 'Tuvalet Kağıdı',
+        title: 'Çeçenistan',
         isChecked: true
       }
     ])
@@ -164,7 +170,9 @@ export default defineComponent({
       exchangeReserve: -54600000000,
       exchangeReserveRange: 100,
       usd: 16.8,
-      eur: 17.52
+      eur: 17.52,
+      gas: 25.17,
+      diesel: 26.65
     })
 
     watch(
@@ -184,7 +192,7 @@ export default defineComponent({
       window.alert('Daha beraber yürüyecektik biz bu yollarda?')
     }
 
-    return { bannedProducts, economy, close }
+    return { countries, economy, close }
   }
 })
 </script>
