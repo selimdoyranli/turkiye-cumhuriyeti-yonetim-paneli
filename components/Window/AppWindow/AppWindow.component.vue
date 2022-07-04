@@ -9,7 +9,7 @@
   .window-body
     .app-window__head
       h4.app-window__title TÜRKİYE CUMHURİYETİ YÖNETİM PANELİ
-      span.app-window__version v2021.12.14
+      span.app-window__version v2021.04.07
 
     // Economy
     fieldset.economy
@@ -28,10 +28,10 @@
           .field-row
             strong Döviz Rezervi
           .field-row
-            input#exchangeReserve(v-model="economy.exchangeReserveRange" type="range" disabled value="128" min="0" max="100")
-            strong ${{ economy.exchangeReserve }}
+            input#exchangeReserve(v-model="economy.exchangeReserveRange" type="range" disabled value="0" max="0")
+            strong ${{ economy.exchangeReserve.toLocaleString('tr-TR') }}
           .field-row
-            button(@click="economy.exchangeReserveRange = 0; economy.exchangeReserve = '0'") Sat
+            button(@click="economy.exchangeReserveRange = 0; economy.exchangeReserve -= 10000000") Borçlan
 
       // USD
       .field-row
@@ -161,7 +161,7 @@ export default defineComponent({
 
     const economy = reactive({
       interest: 14,
-      exchangeReserve: '128.000.000.000',
+      exchangeReserve: -54600000000,
       exchangeReserveRange: 100,
       usd: 14.53,
       eur: 16.42
